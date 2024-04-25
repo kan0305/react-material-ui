@@ -22,6 +22,11 @@ export const Navbar = () => {
                             <ListItemText primary="Layouts" />
                         </ListItemButton>
                     </ListItem>
+                    <ListItem disablePadding>
+                        <ListItemButton component={NavLink} to={"/cards"}>
+                            <ListItemText primary="cards" />
+                        </ListItemButton>
+                    </ListItem>
                 </List>
             </nav>
         </Box>

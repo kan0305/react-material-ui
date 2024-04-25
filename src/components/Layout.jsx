@@ -1,9 +1,8 @@
-import { Container, Grid } from "@mui/material";
+import { Container, Grid, Paper } from "@mui/material";
 import React from "react";
 import { Navbar } from "./Navbar";
 
-
-export const Layout = ({children}) => {
+export const Layout = ({ children }) => {
     return (
         <Container maxWidth="xl">
             <Grid container my={2}>
@@ -11,7 +10,9 @@ export const Layout = ({children}) => {
                     <Navbar />
                 </Grid>
                 <Grid item xs={12} md={9}>
-                    {children}
+                    <Paper elevation={3} sx={{ p: 3 }}>
+                        {children}
+                    </Paper>
                 </Grid>
             </Grid>
         </Container>
