@@ -8,6 +8,7 @@ import { MuiCard } from "./pages/MuiCard";
 import { MuiTextField } from "./pages/MuiTextField";
 import { MuiSelect } from "./pages/MuiSelect";
 import { MuiRadioButton } from "./pages/MuiRadioButton";
+import { MuiForm } from "./pages/MuiForm";
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                     <Route path="/textfield" element={<MuiTextField />} />
                     <Route path="/select" element={<MuiSelect />} />
                     <Route path="/radioButton" element={<MuiRadioButton />} />
+                    <Route path="/muiForm" element={<MuiForm />} />
                 </Routes>
             </Layout>
         </div>

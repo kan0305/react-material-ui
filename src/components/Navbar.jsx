@@ -42,6 +42,11 @@ export const Navbar = () => {
                             <ListItemText primary="radioButton" />
                         </ListItemButton>
                     </ListItem>
+                    <ListItem disablePadding>
+                        <ListItemButton component={NavLink} to={"/muiForm"}>
+                            <ListItemText primary="muiForm" />
+                        </ListItemButton>
+                    </ListItem>
                 </List>
             </nav>
         </Box>
