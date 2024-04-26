@@ -1,9 +1,24 @@
-import { Stack, Button, IconButton, ButtonGroup } from "@mui/material";
+import { Stack, Button, IconButton, ButtonGroup, ToggleButton, ToggleButtonGroup } from "@mui/material";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import React from "react";
+import FormatBoldIcon from "@mui/icons-material/FormatBold";
+import FormatItalicIcon from "@mui/icons-material/FormatItalic";
+import FormatUnderlinedIcon from "@mui/icons-material/FormatUnderlined";
+import React, { useState } from "react";
 
 export const MuiButton = () => {
+    const [format, setFormat] = useState([]);
+
+    const handleFormatChange = (event, newFormats) => {
+        setFormat(newFormats);
+    };
+
+    const [format2, setFormat2] = useState(null);
+
+    const handleFormatChange2 = (event, newFormats) => {
+        setFormat2(newFormats);
+    };
+
     return (
         <Stack spacing={4}>
             <Stack spacing={2} direction="row" alignItems="center">
@@ -68,6 +83,42 @@ export const MuiButton = () => {
                     <Button>CENTER</Button>
                     <Button>RIGHT</Button>
                 </ButtonGroup>
+            </Stack>
+
+            <Stack direction="row">
+                <ToggleButtonGroup aria-label="text formatting" value={format} onChange={handleFormatChange}>
+                    <ToggleButton value="bold" aria-label="bold">
+                        <FormatBoldIcon />
+                    </ToggleButton>
+                    <ToggleButton value="italic" aria-label="italic">
+                        <FormatItalicIcon />
+                    </ToggleButton>
+                    <ToggleButton value="underlined" aria-label="underlined">
+                        <FormatUnderlinedIcon />
+                    </ToggleButton>
+                </ToggleButtonGroup>
+            </Stack>
+
+            <Stack direction="row">
+                <ToggleButtonGroup
+                    aria-label="text formatting"
+                    value={format2}
+                    onChange={handleFormatChange2}
+                    size="small"
+                    color="secondary"
+                    orientation="vertical"
+                    exclusive // only one can be selected
+                >
+                    <ToggleButton value="bold" aria-label="bold">
+                        <FormatBoldIcon />
+                    </ToggleButton>
+                    <ToggleButton value="italic" aria-label="italic">
+                        <FormatItalicIcon />
+                    </ToggleButton>
+                    <ToggleButton value="underlined" aria-label="underlined">
+                        <FormatUnderlinedIcon />
+                    </ToggleButton>
+                </ToggleButtonGroup>
             </Stack>
         </Stack>
     );
