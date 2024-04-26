@@ -37,6 +37,11 @@ export const Navbar = () => {
                             <ListItemText primary="select" />
                         </ListItemButton>
                     </ListItem>
+                    <ListItem disablePadding>
+                        <ListItemButton component={NavLink} to={"/radioButton"}>
+                            <ListItemText primary="radioButton" />
+                        </ListItemButton>
+                    </ListItem>
                 </List>
             </nav>
         </Box>
