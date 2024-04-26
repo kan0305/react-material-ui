@@ -1,13 +1,15 @@
-import { Stack, Button, IconButton } from "@mui/material";
+import { Stack, Button, IconButton, ButtonGroup } from "@mui/material";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import GitHubIcon from '@mui/icons-material/GitHub';
+import GitHubIcon from "@mui/icons-material/GitHub";
 import React from "react";
 
 export const MuiButton = () => {
     return (
         <Stack spacing={4}>
             <Stack spacing={2} direction="row" alignItems="center">
-                <Button variant="text" onClick={() => alert("Hello World")}>Hello World</Button>
+                <Button variant="text" onClick={() => alert("Hello World")}>
+                    Hello World
+                </Button>
                 <Button variant="contained">Hello World</Button>
                 <Button variant="outlined">Hello World</Button>
             </Stack>
@@ -58,6 +60,14 @@ export const MuiButton = () => {
                 <IconButton aria-label="github" size="large" color="#000">
                     <GitHubIcon fontSize="inherit" />
                 </IconButton>
+            </Stack>
+
+            <Stack direction="row">
+                <ButtonGroup variant="contained" size="small" color="secondary" orientation="vertical">
+                    <Button>LEFT</Button>
+                    <Button>CENTER</Button>
+                    <Button>RIGHT</Button>
+                </ButtonGroup>
             </Stack>
         </Stack>
     );
