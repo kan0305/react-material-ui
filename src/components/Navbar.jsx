@@ -27,6 +27,11 @@ export const Navbar = () => {
                             <ListItemText primary="cards" />
                         </ListItemButton>
                     </ListItem>
+                    <ListItem disablePadding>
+                        <ListItemButton component={NavLink} to={"/textfield"}>
+                            <ListItemText primary="textfield" />
+                        </ListItemButton>
+                    </ListItem>
                 </List>
             </nav>
         </Box>

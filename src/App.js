@@ -5,6 +5,7 @@ import { MuiTypography } from "./pages/MuiTypography";
 import { MuiButton } from "./pages/MuiButton";
 import { MuiLayout } from "./pages/MuiLayout";
 import { MuiCard } from "./pages/MuiCard";
+import { MuiTextField } from "./pages/MuiTextField";
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
                     <Route path="/buttons" element={<MuiButton />} />
                     <Route path="/layouts" element={<MuiLayout />} />
                     <Route path="/cards" element={<MuiCard />} />
+                    <Route path="/textfield" element={<MuiTextField />} />
                 </Routes>
             </Layout>
         </div>
