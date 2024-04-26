@@ -32,6 +32,11 @@ export const Navbar = () => {
                             <ListItemText primary="textfield" />
                         </ListItemButton>
                     </ListItem>
+                    <ListItem disablePadding>
+                        <ListItemButton component={NavLink} to={"/select"}>
+                            <ListItemText primary="select" />
+                        </ListItemButton>
+                    </ListItem>
                 </List>
             </nav>
         </Box>
